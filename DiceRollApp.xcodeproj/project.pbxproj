@@ -21,6 +21,8 @@
 		2AD9696519B6656C00476C20 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD9694719B6656C00476C20 /* UIKit.framework */; };
 		2AD9696D19B6656C00476C20 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AD9696B19B6656C00476C20 /* InfoPlist.strings */; };
 		2AD9696F19B6656C00476C20 /* DiceRollAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD9696E19B6656C00476C20 /* DiceRollAppTests.m */; };
+		2AD9697A19B67B1200476C20 /* DieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD9697919B67B1200476C20 /* DieView.m */; };
+		2AD9697D19B684BD00476C20 /* DiceDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD9697C19B684BD00476C20 /* DiceDataController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2AC07D1E19D27D6000A3B2A0 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		2AD9694019B6656C00476C20 /* DiceRollApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiceRollApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AD9694319B6656C00476C20 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2AD9694519B6656C00476C20 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +56,10 @@
 		2AD9696A19B6656C00476C20 /* DiceRollAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DiceRollAppTests-Info.plist"; sourceTree = "<group>"; };
 		2AD9696C19B6656C00476C20 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2AD9696E19B6656C00476C20 /* DiceRollAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiceRollAppTests.m; sourceTree = "<group>"; };
+		2AD9697819B67B1200476C20 /* DieView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DieView.h; sourceTree = "<group>"; };
+		2AD9697919B67B1200476C20 /* DieView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DieView.m; sourceTree = "<group>"; };
+		2AD9697B19B684BC00476C20 /* DiceDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiceDataController.h; sourceTree = "<group>"; };
+		2AD9697C19B684BD00476C20 /* DiceDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiceDataController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +108,7 @@
 		2AD9694219B6656C00476C20 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2AC07D1E19D27D6000A3B2A0 /* libsqlite3.dylib */,
 				2AD9694319B6656C00476C20 /* Foundation.framework */,
 				2AD9694519B6656C00476C20 /* CoreGraphics.framework */,
 				2AD9694719B6656C00476C20 /* UIKit.framework */,
@@ -119,6 +127,10 @@
 				2AD9695919B6656C00476C20 /* ViewController.m */,
 				2AD9695B19B6656C00476C20 /* Images.xcassets */,
 				2AD9694A19B6656C00476C20 /* Supporting Files */,
+				2AD9697819B67B1200476C20 /* DieView.h */,
+				2AD9697919B67B1200476C20 /* DieView.m */,
+				2AD9697B19B684BC00476C20 /* DiceDataController.h */,
+				2AD9697C19B684BD00476C20 /* DiceDataController.m */,
 			);
 			path = DiceRollApp;
 			sourceTree = "<group>";
@@ -199,6 +211,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Ventois;
 				TargetAttributes = {
+					2AD9693F19B6656C00476C20 = {
+						DevelopmentTeam = 37B52A7C8S;
+					};
 					2AD9696019B6656C00476C20 = {
 						TestTargetID = 2AD9693F19B6656C00476C20;
 					};
@@ -250,7 +265,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AD9695A19B6656C00476C20 /* ViewController.m in Sources */,
+				2AD9697A19B67B1200476C20 /* DieView.m in Sources */,
 				2AD9695419B6656C00476C20 /* AppDelegate.m in Sources */,
+				2AD9697D19B684BD00476C20 /* DiceDataController.m in Sources */,
 				2AD9695019B6656C00476C20 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,10 +393,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Karthik Mada (ZN9LNEEB7K)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DiceRollApp/DiceRollApp-Prefix.pch";
 				INFOPLIST_FILE = "DiceRollApp/DiceRollApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9f79829a-0b46-46a2-8ed6-5f728a40f3d7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -389,10 +410,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Karthik Mada (ZN9LNEEB7K)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DiceRollApp/DiceRollApp-Prefix.pch";
 				INFOPLIST_FILE = "DiceRollApp/DiceRollApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9f79829a-0b46-46a2-8ed6-5f728a40f3d7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -456,6 +481,7 @@
 				2AD9697419B6656C00476C20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2AD9697519B6656C00476C20 /* Build configuration list for PBXNativeTarget "DiceRollAppTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +490,7 @@
 				2AD9697719B6656C00476C20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
