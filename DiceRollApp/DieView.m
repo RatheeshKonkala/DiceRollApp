@@ -13,6 +13,7 @@
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
+    
     if (self) {
         // Initialization code
     }
@@ -22,6 +23,7 @@
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
+    
     if (self)
     {
         // initialization code
@@ -30,6 +32,7 @@
         
         // create UIImageView and assign it to our property
         self.dieImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+        
         // add Image View to the View
         [self addSubview:self.dieImageView];
         
@@ -51,6 +54,7 @@
 {
     // consruct file name based on input parameter
     NSString *fileName = [NSString stringWithFormat:@"dice%d.png", number];
+    
     // set the image to the UIImageView
     self.dieImageView.image = [UIImage imageNamed:fileName];
     

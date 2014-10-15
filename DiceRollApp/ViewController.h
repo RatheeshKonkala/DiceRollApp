@@ -12,8 +12,11 @@
 @interface ViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIButton *rollButton;
+
 @property (weak, nonatomic) IBOutlet UILabel *sumLabel;
+
 @property (weak, nonatomic) IBOutlet DieView *firstDieView;
+
 @property (weak, nonatomic) IBOutlet DieView *secondDieView;
 
 @end
